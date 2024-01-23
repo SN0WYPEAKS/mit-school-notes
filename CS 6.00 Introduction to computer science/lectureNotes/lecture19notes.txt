@@ -1,0 +1,31 @@
+notes on the board:
+    biased random walks
+    polymorphism:
+        the provision of a single interface to entities of different types, or the use of a single symbol to represent muyltiple different types
+    distribution of the data:
+        tells information about how many people end up where rather than just the averages
+    normal(Gaussian)distribution:
+        a probability distribution that is symmetric about the mean,
+        showing that data near the mean are more frequent in occurrence
+        than data far from the mean
+    manhattan project:
+        an unprecedented, top-secret world war 2 government program
+        in which the United States rushed to develop and deploy
+        the world's first atomic weapons before nazi germany
+    monte carlo simulation:
+        a mathematical technique that predicts possible outcomes of an uncertain event
+    generate a sample of representative scenarios
+    simulations are like experimental devices
+    simulations are typically descriptive not prescriptive:
+        describe situations they don't tell the solution
+    optimization algorithm is descriptive:
+        gives the best possible solution
+
+definitions for title subjects:
+    biased random walks simulation:
+        a time path process in which an evolving variable
+        jumps from its current state to one of various potential new states
+    distributions:
+        a method of simulating the variations that occur in timing
+        (and other numbers)
+        in any process involving people or machines or anything in nature

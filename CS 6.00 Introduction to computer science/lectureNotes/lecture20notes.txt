@@ -1,0 +1,32 @@
+notes on the board:
+    stockastic vs deterministic:
+        deterministic simulations should get the same solution everytime it is run
+        stockastic should differ from run to run because there is an element of randomness
+    static vs dynamic:
+        in dynamic situations time plays a role as things evolve over time
+        static situations have no issue of time
+    queing networks(popular example of a dynamic situation):
+        models where customers (service requests) arrive at service stations (servers) to be served in a queue
+    discrete simulation:
+        a method of simulating the behaviour and performance of a real-life process, facility or system
+    continuous simulation:
+        refers to simulation approaches where a system is modeled with the help of variables
+        that change continuously according to a set of differential equations
+    monte carlo simulation(inferential statistics):
+        a mathematical technique that predicts possible outcomes of an uncertain event.
+        computer programs use this method to analyze past data
+        and predict a range of future outcomes based on a choice of action
+    inferential statistics:
+        uses statistical techniques to extrapolate information from a smaller sample
+        to make predictions and draw conclusions about a larger population.
+        random sample tends to exhibit same properties as the population from which it was drawn.
+    
+
+definitions of the subjects in the lesson title:
+    monte carlo simulations:
+        a mathematical technique that predicts possible outcomes of an uncertain event.
+        computer programs use this method to analyze past data
+        and predict a range of future outcomes based on a choice of action
+    estimating pi:
+        the ratio of the circumference of a circle to its diameter
+        3.14159

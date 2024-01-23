@@ -1,0 +1,27 @@
+notes on the board:
+    data enhancement(extrapolate)
+    texas sharpshooter fallacy:
+        shooting randomly at a barn and drawing bulls-eyes over the holes
+    446 anorexic women interviewed:
+        (30% more than average were born in June)
+        48 3%
+        answered the wrong question
+        lurking variables
+    stockmarket simulation:
+        indexed portfolio: 
+            you want to own all the stocks in the market
+            if the stock market goes up or down your money follows it
+            don't require a lot of thought
+            low expense ratio because you don't need to pay anyone to find the best stocks to invest in
+        managed portfolio:
+            you hire someone smart to pick winning stocks to invest in
+        efficient market hypothesis:
+            asserts that markets are informationally efficient:
+                current prices reflect all publicly known information about each stock(un-biased)
+                tomorrow it is just as likely to go up or down relative to the market
+        stock & market:
+            adjusted for risk
+        distribution
+        multiplicative vs additive
+        memoryless (poisson):
+            past behavior has no bearing on future behavior

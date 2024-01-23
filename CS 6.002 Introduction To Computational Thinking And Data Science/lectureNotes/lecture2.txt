@@ -1,0 +1,52 @@
+notes from the lecture:
+    algorithms
+        greedy algorithm:
+            pro:
+                easy to implement
+                computationally efficient
+            cons:
+                does not always yield the best solution
+                don't even know how good the approximation is
+        brute force algorithm:
+            uses a search tree
+            enumerate all possible combinations of items
+            remove all of the combinations whose total units exceeds the allowed weight
+            from the remaining combinations choose any one whose value is the largest
+            pros:
+                easy to code and understand
+                solves the problem accurately if implemented correctly
+                generates a solution
+            cons:
+                grows exponentially which means it slows exponentially
+                not very useful for large computations
+                not very suitable in real world applications
+
+summary of lectures 1-2:
+    many problems of practical importance can be formulated as optimization problems
+    greedy algorithms often provide adequate(though not necessarily optimal) solutions
+    finding an optimal solution is usually exponentially hard
+    but dynamic programming often yields good
+    performance for a subclass of optimization problems:
+        those with optimal substructure and overlapping subproblems:
+            solution always correct
+            fast under the right circumstances
+
+functions and outlines:
+    search tree:
+        you have a root and the children of the root
+        look at the elements to be considered. start with root one
+        outline the result of choosing each particular element
+        choose the highest value node that meets the constraints
+        left-first(depth-first) enumeration:
+            starts at the root node (selecting some arbitrary noed as the root node in the case of a graph)
+            and explores as far as possible along each branch before backtracking
+        computational complexity:
+            time based on number of nodes generated
+            number of levels is number of items to choose from
+            number of nodes at level i is 2**i
+            so, if there are n items the number of nodes is:
+                the sum zero of n to 2 of the i
+                (2**n + 1)
+            an obvious optimization:
+                don't explore parts of tree that violate constraint(e.g., too many calories)
+                    doesn't change complexity

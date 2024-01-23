@@ -1,0 +1,45 @@
+notes on the board:
+    totally ordered:
+        anything on the left is smaller than what is on the right
+    regression testing:
+        a type of testing in the software development cycle that runs after every change to ensure that the change introduces no unintended breaks
+    the square root of 0.25 is 0.5
+    speed of convergence:
+        the speed of the error as we approach the root
+    finding the root:
+        sqrt(x)
+        f(guess) = guess**2 - x
+        f(guess) = 0
+    dy/dx
+    f(guessi) = 2 * guessi
+        guessi + 1 = guessi - f(guessi)/2*guessi
+    f(3) = 9 - 16 = -7
+    guessi + 1 = 3 - (-7/6) = 4.1666
+    answers can be wrong
+    if there are many ones in a row, be suspicious and paranoid
+    non-scalar types:
+        tuples()
+        strings
+        both immutable
+    mutable types:
+        lists[]
+        Techs = ['MIT', 'Cal Tech']
+        Techs ==> 'MIT'|'Cal Tech'
+        Ivys = ['Harvard', 'Yale', 'Brown']
+        Ivys ==> 'Harvard'|'Yale'|'Brown'
+        Univs = []
+        Univs ==>
+        Univs.append(Techs)
+    methods:
+        fancy name for function with a different syntax
+    flatten the list:
+        instead of using append, use the concatenate operator
+
+definition of the subjects in the lesson title:
+    bisection methods:
+        an approximation method to find the roots of the given equation by repeatedly dividing the interval
+    newton/raphson:
+        a way to quickly find a good approximation for the root of a real-valued function
+        faster and more accurate than bisection
+    introduction to lists:
+        a sequence of several variables, grouped together under a single name

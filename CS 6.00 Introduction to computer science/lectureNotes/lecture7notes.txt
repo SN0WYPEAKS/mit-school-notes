@@ -1,0 +1,45 @@
+notes on the board:
+    Ivys[1] = -15
+    L1(list 1) points to a list 1,2,3
+    L2 = L1 will make L2 point to the same object as L1 so if anything is changed in L1, it will change in L2 as well
+    a = 1
+    b = a
+    a = 2
+    these assignments are immutable, so b will still point to 1 even if a is assigned to something else
+    dictionaries:
+        mutable
+        not ordered
+        generalized indexing
+        elements in dictionaries are key value pairs <key, value>
+    key value pairs:
+        a data type that includes two pieces of data that have a set of associated values and a group of key identifiers
+    hashing:
+        the process of transforming any given key or a string of characters into another value
+    pseudocode for computing the length of a hypotenus of a right triangle:
+        input value for the base as a float
+        find the height
+        find the square root of b**2 + h**2
+        save as a float in hyp(hypotenus)
+        print out the answer using the value in hyp
+    efficiency:
+        orders of growth
+        choice of algorithm
+        map problem into class of algorithms
+        space and time
+        how much memory do i need to complete a computation
+        what is the number of basic steps needed as a function of input size
+    random access model:
+        best case min
+        worst case max
+        expected case avg
+
+definitions for lesson title subjects:
+    lists:
+        a sequence of several variables, grouped together under a single name
+    mutability:
+        a mutable object can be changed after it's created
+    dictionaries:
+        an abstract data type that defines an unordered collection of data as a set of key-value pairs
+    introduction to efficiency:
+        a broad term used to depict the reliability, speed and programming methodology used in developing codes for an application
+

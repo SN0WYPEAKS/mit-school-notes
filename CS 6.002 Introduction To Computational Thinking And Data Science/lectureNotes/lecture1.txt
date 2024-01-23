@@ -1,0 +1,31 @@
+notes from the lecture:
+    models:
+        optimization model:
+            start with an objective function that needs to be maximized or minimized
+            a set of constraints that must be obeyed
+    algorithms:
+        greedy:
+            finds a solution to problems in the shortest time possible.
+            it picks the path that seems optimal at the moment without regard
+            for the overall optimization of the solution that would be formed.
+        brute-force:
+            enumerate all possible combinations of items.
+            remove all of the combinations whose total units exceeds the allowed weight.
+            from the remaining combinations choose any one whose value is the largest.
+                often not practical:
+                    how big is power set?
+                    recall:
+                        a vector, V, of length n, is used to indicate wheter or not
+                        items are take. If V[i] = 1, item I[i] is taken.
+                        if V[i] = 0, item I[i] is not taken.
+                    how many possible different values can V have?:
+                        as many different binary numbers as can be represented in n bits
+                    for example, if there are 100 items to choose from,
+                    the power set is of size?:
+                        1,267,650,600,228,229,401,496,703,205,376
+                        it grows exponentially
+    functions:
+        lambda:
+            used to create anonymous functions:
+                lambda<id1, id2, ...idn>: <expression>
+                Returns a function of n arguments

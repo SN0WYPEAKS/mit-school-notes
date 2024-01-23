@@ -1,0 +1,58 @@
+notes on the board:
+    so far we have:
+        assignment
+        conditionals
+        input/output
+        looping constructs(for/while)
+    turing complete:
+        this is enough to write any program(technically correct)
+        cannot easily write any program
+    we don't have:
+        decomposition(also known as factoring):
+            breaking complex problems or systems into parts that are easier to conceive, understand, program, and maintain
+        abstraction:
+            the process of removing elements of a code or program that aren't relevant or that distract from more important elements(suppress details that the user doesn't need)
+    functions:
+        break up into modules
+        suppress detail
+        create "new primitives"
+    def - keyword
+    name(x) formal parameters
+    example function:
+        def sqrt(x):
+            block of code
+    return - keyword
+    None - special value(there is no value coming back from the computation)
+    if you don't specify a return value, None gets returned implicitly
+    invoke function by passing in values for the parameters:
+        sqrt(16)
+        binds x to 16(locally bound in the function)
+    ans is also bound locally
+    local bindings do not affect global bindings
+    interpreter - global bindings:
+        x = 3
+    call function:
+        local table:
+            sqrt:
+                x = 16
+                ans = 0
+            returned value gets given back to the interpreter but does not affect global variables even if they have the same name
+    farmyard problem:
+        20 heads    56 legs     enumerate and check(brute force algorithm)
+        numPigs + numChickens = 20
+        4*numPigs + 2*numChickens = 56
+    number of pigs: 8
+    number of chickens: 12
+    pigs, chickens, and spiders
+    recursion:
+        base case - simplest possible solution
+        inductive step:
+            break problem into a simpler version of the same problem, + some other steps
+        inductive definition:
+            a program that calls and describes itself
+
+definition of the subjects in the lesson title:
+    abstraction through functions:
+        every time you declare a function, you are creating an abstraction by giving a name to a piece of code
+    introduction to recursion:
+        the process of defining a problem (or the solution to a problem) in terms of (a simpler version of) itself
