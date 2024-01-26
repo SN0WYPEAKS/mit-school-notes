@@ -1,6 +1,64 @@
 notes from the lecture:
-    
+    inferential statistics:
+        population:
+            a set of examples
+        sample:
+            a proper subset of a population(not the whole thing)
+        key fact:
+            a random sample tends to exhibit the same
+            properties as the population from which it is drawn
+    exactly what we did with random walk
+    the more tests done, the more accurate the result
+    provided the base case is done correctly.
+    law of large numbers:
+        in repeated independendt tests with the same actual
+        probability p of a particular outcome in each test, the
+        chance that the fraction of times that outcome occurs
+        differs from p converges to zero as the number of trials
+        goes to infinity
+    gambler's fallacy:
+        since the probability of a run of five successive heads is 132(one in thirty-two),
+        a person might believe that the next flip would be more likely to come up tails rather than heads again
+    regression to the mean:
+        if somebody's parents are both taller than average, the child is more likely to be shorter than them.
+    quantifying variation in data:
+        standard deviation simply the square root of the variance
+        outliers can have a big effect
+        standard deviation should always be considered relative to mean
+    confidence levels and intervals:
+        instead of estimating an unknown parameter by a single value(e.g., the mean of a set of trials),
+        a confidence interval provides a range that is likely to contain the unknown value and a confidence
+        that the unknown value lays within that range
+        "The return on betting a pocket 10k times in European roulette is -3.3%. The margin of error is +/-3.5%
+        with a 95% level of confidence."
+        what does this mean?:
+            if i were to conduct an infinite number of trials of 10k bets each:
+                my expected average return would be -3.3%
+                my return would be between roughly -6.8% and +0.2% 95% of the time
+    empirical rule:
+        a statistical rule that states that almost all observed data for a normal distribution will fall
+        within three standard deviations of the mean or average
+        under some assumptions discussed later:
+            ~68% of data within one standard deviation of mean
+            ~95% of data within 1.96 standard deviations of mean
+            ~99.7% of data within 3 standard deviations of mean
+    assumptions underlying empirical rule:
+        the mean estimation error is zero
+        the distribution of the errors in the estimates is normal
+    defining distributions:
+        use a probability distribution
+        captures notion of relative frequency with which a random variable takes on certain values:
+            discrete random variables drawn from finite set of values
+            continuous random variables drawn from reals between two numbers(i.e., infinite set of values)
+        for discrete variable, simply list the probability of each value, must add up to 1
+        continuous case trickier, can't enumerate probability for each of an infinite set of values
+    probability density functions(PDFs):
+        distribution defined by probability
+        probability of a random variable lying between two values
+        defines a curve where the values on the x-axis lie between minimum and maximum value of the variable
+        area under curve between two points, is probability of example falling within that range
 
 subject title definitions:
     monte carlo simulation:
-        
+        a method of estimating the value of an unknown
+        quantity using the principles of inferential statistics
