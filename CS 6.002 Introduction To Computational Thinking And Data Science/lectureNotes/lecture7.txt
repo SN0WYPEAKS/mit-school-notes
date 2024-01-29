@@ -1,0 +1,8 @@
+notes from the lecture:
+
+definition of title subjects:
+    confidence intervals:
+        a range of values that describes
+        the uncertainty surrounding an estimate
+        (a range of values so defined that there is a specified probability
+        that the value of a parameter lies within it)
