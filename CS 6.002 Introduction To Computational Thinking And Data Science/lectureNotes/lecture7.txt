@@ -1,4 +1,52 @@
 notes from the lecture:
+    mean:
+        the average number; found by adding all data points
+        and dividing by the number of data points
+    standard deviation(sigma):
+        a measure of how dispersed the data is in relation to the mean
+    normal distribution:
+        data is symmetrically distributed with now skew
+        a data set (when graphed) must follow a bell-shaped
+        symmetrical curve centered around the mean
+    probability density functions(PDFs):
+        basic function (PDF) for normal distribution:
+            def gaussian(x, mu, sigma):
+                factor1 = (1.0/(sigma*((2*pylab.pi)**0.5)))
+                factor2 = pylab.e**-(((x-mu)**2)/(2*sigma**2))
+                return factor1*factor2
+    densities:
+        derivative of cumulative distribution function
+    derivative in math:
+        the rate of change of a function, or the slope of the tangent line
+        at a particular point on a function
+    Digressing from the lesson to discuss useful tools:
+        SciPy:
+            library contains useful mathematical functions used by scientists and engineers
+            scipy.integrate.quad has up to four arguments:
+                a function or method to be integrated
+                a number representing the lower limit of the integration,
+                a number representing the upper limit of the integration,
+                and an optional tuple supplying values for all arguments, except the first,
+                of the function to be integrated
+            scipy.integrate.quad returns a tuple:
+                approximation to result
+                estimate of absolute error
+    the central limit theorem(CLT):
+        1. the means of the samples in a set of samples
+            (the sample means) will be approximately normally distributed,
+        2. this normal distribution will have a mean close
+            to the mean of the population, and
+        3. the variance of the sample means will be close
+            to the variance of the population divided by the sample size
+    is it correct to state(from our simulations to find pi):
+        95% of the time we run this simulation, we will estimate
+        that the value of pi is between 3.13743875875 and 3.14567467875?:
+            yes
+        with a probability of 0.95 the actual value of pi
+        is between 3.13743875875 and 3.14567467875?
+            yes
+        both are factually correct
+        but only the first of these statements can be inferred from our simulation
 
 definition of title subjects:
     confidence intervals:

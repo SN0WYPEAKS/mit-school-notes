@@ -153,7 +153,7 @@ def throwNeedles(numNeedles):
         y = random.random()
         if (x*x + y*y)**0.5 <= 1.0:
             inCircle += 1
-    return 2*(inCircle/float(numNeedles))
+    return 4*(inCircle/float(numNeedles))
     
 def getEst(numNeedles, numTrials):
     estimates = []
