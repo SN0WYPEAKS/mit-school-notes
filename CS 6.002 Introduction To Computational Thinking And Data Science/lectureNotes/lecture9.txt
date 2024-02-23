@@ -1,0 +1,51 @@
+lecture notes:
+    linear spring:
+        amount of force needed to stretch or compress spring
+        is linear in the distance the spring is stretched
+        or compressed
+        each spring has a spring constant, k, that determines
+        how much force is needed
+    hooke's law of elasticity:
+        the strain of the material is proportional to the
+        applied stress within the elastic limit of that material
+            F = -kd
+            if a spring has a spring constant of 35,000 newtons
+            how much does a rider have to weigh to compress
+            the spring by one centimeter
+            F=0.01m*35,000N/m
+            F=350N
+            F=mass*acc
+            F=mass*9.8m per second squared which is the acceleration
+            of gravity
+            mass*9.8m/s2=350N
+            mass=350N/9.81m/s2
+            mass=350k/9.81 the k refers to kilograms, not the
+            spring constant
+            mass=35.68k or 79lbs
+        there is a limit to the amount of force the law can hold
+        before the spring breaks down
+    finding k (spring constant):
+        F=-kd       F = force
+        k=-F/d      d = distance
+        k=9.81*m/d  m = mass
+    measuring distance:
+        which should we choose?:
+            x-axis, y-axis, or perpendicular to the line?
+            Vertical distance because we want to predict
+            dependent Y value for given independent X value,
+            and vertical distance measures error in that prediction
+    least squares objective function:
+        representing the sum of squared differences between
+        measurements stored in an experimental data file and a
+        corresponding expression evaluated in the COMSOL Multiphysics model
+        y = mx + b and y = a + bx
+        In a least-squares regression for y = mx + b,
+        m = N ∑ ( x y ) − ∑ x ∑ y N ∑ ( x 2 ) − ( ∑ x ) 2 and b = ∑ y − m ∑ x N,
+        where N is the number of data points, while x and y are the
+        coordinates of the data points.
+
+title subject definitions:
+    experimental data:
+        collected through active intervention by the researcher
+        to produce and measure change or to create difference
+        when a variable is altered
