@@ -14,7 +14,7 @@ def scaleAttrs(vals):
 def getData(toScale = False):
     #read in data
     hrList, stElevList, ageList, prevACSList, classList = [],[],[],[],[]
-    cardiacData = open('../lectureExtraFiles/cardiacData.txt', 'r')
+    cardiacData = open('cardiacData.txt', 'r')
     for l in cardiacData:
         l = l.split(',')
         hrList.append(int(l[0]))

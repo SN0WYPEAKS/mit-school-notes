@@ -27,7 +27,7 @@ def makeHist(data, title, xlabel, ylabel, bins = 20):
     pylab.ylabel(ylabel)
 
 def getHighs():
-    inFile = open('../lectureExtraFiles/temperatures.csv')
+    inFile = open('temperatures.csv')
     population = []
     for l in inFile:
         try:

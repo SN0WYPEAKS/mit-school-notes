@@ -60,11 +60,11 @@ def fitData(fileName):
                + str(round(1/model[0], 5)))
     pylab.legend(loc = 'best')
 
-#fitData1('../lectureExtraFiles/springData.txt')
+#fitData1('springData.txt')
 
 #Demonstration using mystery data
 
-#xVals, yVals = getData('../lectureExtraFiles/mysteryData.txt')
+#xVals, yVals = getData('mysteryData.txt')
 #pylab.plot(xVals, yVals, 'o', label = 'Data Points')
 #pylab.title('Mystery Data')
 #
@@ -120,7 +120,7 @@ def testFits(models, degrees, xVals, yVals, title):
 
 #code for testing goodness of fit to parabolic data
 
-xVals, yVals = getData('../lectureExtraFiles/mysteryData.txt')
+xVals, yVals = getData('mysteryData.txt')
 #degrees = (1, 2)
 #models = genFits(xVals, yVals, degrees)
 #testFits(models, degrees, xVals, yVals, 'Mystery Data')

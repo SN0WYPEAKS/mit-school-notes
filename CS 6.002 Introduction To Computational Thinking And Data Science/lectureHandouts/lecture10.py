@@ -61,7 +61,7 @@ def fitData(fileName):
                + str(round(1/a, 5)))
     pylab.legend(loc = 'best')
 
-# fitData('../lectureExtraFiles/springData.txt')
+# fitData('springData.txt')
 
 
 def fitData1(fileName):

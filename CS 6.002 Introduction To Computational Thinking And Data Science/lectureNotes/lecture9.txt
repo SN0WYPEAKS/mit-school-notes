@@ -41,8 +41,95 @@ lecture notes:
         y = mx + b and y = a + bx
         In a least-squares regression for y = mx + b,
         m = N ∑ ( x y ) − ∑ x ∑ y N ∑ ( x 2 ) − ( ∑ x ) 2 and b = ∑ y − m ∑ x N,
+        ∑:
+            shorthand notation to indicate the sum of a number of similar terms.
         where N is the number of data points, while x and y are the
         coordinates of the data points.
+        to minimize this objective function, i want to find a curve for the
+        predicted observations that leads to minimum value
+    linear regression:
+        a data analysis technique that predicts the value of unknown data
+        by using another related and known data value
+    polynomials with one variable(x):
+        0 or sum of finite number of non-zero terms
+        each term of the form cxᵖ:
+            c(constant), the coefficient, a real number
+            p(power), the degree of the term, a non-negative integer
+        the degree of the polynomial is the largest degree of any term
+        examples:
+            line: ax + b
+            parabola: ax² + bx + c
+    solving for least squares:
+        len(observed)-1
+        ∑ (observed[i]-predicted[i])²
+        i=0
+        simple example:
+            use a degree-one polynomial, y=ax+b, as a model of our
+            data(we want the best fitting line)
+    polyfit:
+        good news is that pylab provides built in functions to find these
+        polynomial fits
+        pylab.polyfit(observedX, observedY, n)
+        finds coefficients of a polynomial of degree n, that provides 
+        a best least squares fit for the observed data:
+            n = 1 - best line       y = ax + b
+            n = 2 - best parabola   y = ax**2 + bx + c
+        it takes a collection of x values
+        it takes a collection of equal length y values:
+            they need to be equal length(assumed arrays)
+        it takes an integer n which is the degree of fit that i want to apply
+        n can be any non-negative integer
+    polyval:
+        evaluates the polynomial p at the points in x and
+        returns the corresponding function values in y
+    let's try a higher-degree model:
+        model2 = pylab.polyfit(xVals, yVals, 2)
+        pylab.plot(xVals, pylab.polyval(model2, xVals),
+                   'r--', label = 'Quadratic Model')
+        note that this is still an example of linear regression, even though
+        we are not fitting a line to the data
+        (in this case we are finding the best parabola) ax**2 + bx + c
+        one axis is 'a' values
+        second axis is 'b' values
+        third axis is 'c' values
+    comparing mean squared error:
+        def aveMeanSquareError(data, predicted):
+            error = 0.0
+            for i in range(len(data)):
+                error += (data[i] - predicted[i])**2
+            return error/len(data)
+        
+        estYVals = pylab.polyval(model1, xVals)
+        print('Ave. mean square error for linear model =',
+              aveMeanSquareError(yVals, estYVals))
+        estYVals = pylab.polyval(model2, xVals)
+        print('Ave. mean square error for quadratic model =',
+              aveMeanSquareError(yVals, estYVals))
+        
+        Ave. mean square error for linear model = 9372.73078965
+        Ave. mean square error for quadratic model = 1524.02044718
+        In this situation the quadratic is about six times better
+        the residual error is about six times smaller
+        how do i know if there is a better model out there
+    the coefficent of determination:
+        in an absolute sense:
+            mean square error useful for comparing two different models
+            for the same data
+            useful for getting a sense of absolute goodness of fit?
+            is 1524 good?
+            hard to know, since there is no bound on values
+            and not scale independent
+            instead we use coefficent of determination, R²:
+                R² = 1 - ∑ᵢ(yᵢ - pᵢ)²(Error in estimates)
+                         -----------
+                         ∑ᵢ(yᵢ - µ)²(variability in measured data)
+                Yᵢ:
+                    are measured values
+                Pᵢ:
+                    are predicted values
+                µ:
+                    is mean of measured values
+                
 
 title subject definitions:
     experimental data:
