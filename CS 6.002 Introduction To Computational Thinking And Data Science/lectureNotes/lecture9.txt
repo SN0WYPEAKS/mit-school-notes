@@ -73,7 +73,7 @@ lecture notes:
         finds coefficients of a polynomial of degree n, that provides 
         a best least squares fit for the observed data:
             n = 1 - best line       y = ax + b
-            n = 2 - best parabola   y = ax**2 + bx + c
+            n = 2 - best parabola   y = ax² + bx + c
         it takes a collection of x values
         it takes a collection of equal length y values:
             they need to be equal length(assumed arrays)
@@ -88,7 +88,7 @@ lecture notes:
                    'r--', label = 'Quadratic Model')
         note that this is still an example of linear regression, even though
         we are not fitting a line to the data
-        (in this case we are finding the best parabola) ax**2 + bx + c
+        (in this case we are finding the best parabola) ax² + bx + c
         one axis is 'a' values
         second axis is 'b' values
         third axis is 'c' values
@@ -96,7 +96,7 @@ lecture notes:
         def aveMeanSquareError(data, predicted):
             error = 0.0
             for i in range(len(data)):
-                error += (data[i] - predicted[i])**2
+                error += (data[i] - predicted[i])²
             return error/len(data)
         
         estYVals = pylab.polyval(model1, xVals)
@@ -120,16 +120,26 @@ lecture notes:
             hard to know, since there is no bound on values
             and not scale independent
             instead we use coefficent of determination, R²:
-                R² = 1 - ∑ᵢ(yᵢ - pᵢ)²(Error in estimates)
-                         -----------
-                         ∑ᵢ(yᵢ - µ)²(variability in measured data)
+                         ∑ᵢ(yᵢ - pᵢ)²   (Error in estimates)
+                R² = 1 - -----------
+                         ∑ᵢ(yᵢ - µ)²    (variability in measured data)
                 Yᵢ:
                     are measured values
                 Pᵢ:
                     are predicted values
                 µ:
-                    is mean of measured values
-                
+                    is mean(average) of measured values
+            if you prefer code:
+                def rSquared(observed, predicted):
+                    error = ((predicted - observed)²).sum()
+                    meanError = error/len(observed)
+                    return 1 - (meanError/numpy.var(observed))
+            I am playing a clever trick here:
+                numerator is sum of squared errors
+                dividing by number of samples gives average sum-squared-error
+                denominator is variance times number of samples
+                so mean sse/variance is same as R² ratio
+            
 
 title subject definitions:
     experimental data:
