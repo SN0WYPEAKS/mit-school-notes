@@ -224,6 +224,64 @@ lecture notes:
         pylab.xlabel('Year')
         pylab.ylabel('Mean Daily High (C)')
         pylab.title('Select U.S. Cites')
+    fitting four different models(linear, quadratic, cubic, and quartic)
+    initialize things:
+        numSubsets = 10
+        dimensions = (1, 2, 3, 4)
+        rSquares = {}
+        for d in dimensions:
+            rSquares[d] = []
+    split data:
+        def splitData(xVals, yVals):
+            toTrain = random.sample(range(len(xVals)), len(xVals)//2)
+            trainX, trainY, testX, testY = [],[],[],[]
+            for i in range(len(xVals)):
+                if i in toTrain:
+                    trainX.append(xVals[i])
+                    trainY.append(yVals[i])
+                else:
+                    testX.append(xVals[i])
+                    testY.append(yVals[i])
+            return trainX, trainY, testX, testY
+    random.sample(given this iterator(collection from 0 to n-1)select this many
+        (in this case half "//2")of these numbers at random with no duplicates)
+    train, test, and report:
+        for f in range(numSubsets):
+            trainX, trainY, testX, testY = splitData(xVals, yVals)
+            for d in dimensions:
+                model = pylab.polyfit(trainX, trainY, d)
+                #estYVals = pylab.polyval(model, trainX)
+                estYVals = pylab.polyval(model, testX)
+                rSquares[d].append(rSquared(testY, estYVals))
+        print('Mean R-squares for test data')
+        for d in dimensions:
+            mean = round(sum(rSquares[d])/len(rSquares[d]), 4)
+            sd = round(numpy.std(rSquares[d]), 4)
+            print('For dimensionality', d, 'mean =', mean, 'Std =', sd)
+    results:
+        mean r-squares for test data
+        for dimensionality 1(linear)    mean = 0.7535 Std = 0.0656
+        for dimensionality 2(quadratic) mean = 0.7291 Std = 0.0744
+        for dimensionality 3(cubic)     mean = 0.7039 Std = 0.0684
+        for dimensionality 4(quartic)   mean = 0.7169 Std = 0.0777
+
+        linear seems to be the winner:
+            highest average r-squared
+            smallest deviation across trials
+            simplest model
+    why we should run multiple tests:
+        note that deviations are a decimal order of magnitude smaller than means:
+            suggests that while there is good agreement, deviations are large enough
+            there could be a noticeable range of variation across trials
+        suppose we had just run one trial:
+            here are the R² values for each trial of linear fit:
+                [0.7828002156420516, 0.80637964025052067,
+                0.79637132757274265, 0.78433885743211906,
+                0.76001112024853124, 0.57088936507035748,
+                0.72115408562589023, 0.74358276762149023,
+                0.79031455375148507, 0.77920238586399471]
+            if we had only run one split, and happened to get this 0.57088936507035748
+            result, we might have reached a different conclusion about validity of linear model
 
 title subject definitions:
 experimental data:
