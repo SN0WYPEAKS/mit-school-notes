@@ -1,0 +1,98 @@
+lecture notes:
+    the plan ahead:
+        machine learning is a huge topic - with whole courses devoted to it:
+            e.g., 6.008, 6.036, 6.860, 6.862, 6.867, and as central part
+            of courses in natural language processing, computational biology,
+            computer vision, robotics, other areas
+        in 6.0002, we will:
+            provide an introduction to the basic ideas, including ways to
+            measure distances between examples, and how to group examples
+            based on distance to create models
+            introduce classification methods, such as "k nearest neighbor" methods
+            introduce clustering methods, such as "k-means"
+
+    what is machine learning:
+        all useful programs learn something
+        in the first lecture of 6.0001 we looked at an algorithm for finding square roots
+        last week we looked at using linear regression to find a model of a collection of points
+        early definition of machine learning:
+            "field of study that gives computers the ability
+            to learn without being explicitly programmed." Arthur Samuel (1959)
+            computer pioneer who wrote first self-learning prgram, which played
+            checkers - learned from "experience"
+            invented alpha-beta pruning - widely used in decision tree searching
+        traditional programming(example used: square root finder):
+            you program the thing you want to do and input the data that you want
+            the program to use then compare the output to the expected result
+        machine learning(example used: curve fitting by linear regression):
+            input the data that you want the program to use then input the
+            output you expect. the machine will "learn"
+            to build the program that you want.
+    
+    how are things learned?:
+        memorization(declarative knowledge):
+            accumulation of individual facts
+            limited by:
+                time to observe facts
+                memory to store facts
+        generalization(imperative knowledge):
+            deduce new facts from old facts
+            limited by accuracy of the deduction process:
+                essentially a predictive activity
+                assumes that the past predicts the future
+    
+    basic paradigm:
+        observe set of examples:
+            training data:
+                spatial deviations relative to mass displacements of spring
+        infer something about process that generated that data:
+            fit polynomial curve using linear regression
+        use inference to make predictions about previously unseen data:
+            test data:
+                predict displacements for other weights
+        variations on paradigm:
+            supervised:
+                given a set of feature/label pairs, find a rule that
+                predicts the label associated with a previously unseen input
+            unsupervised:
+                given a set of feature vectors (without labels) group them
+                into "natural clusters" (or create labels for groups)
+
+    some examples of classifying and clustering:
+        here are some data on the new england patriots:
+            name, height, weight
+            labeled by type of position
+
+        receivers:
+            edelman     = ['edelman',    70, 200]
+            hogan       = ['hogan',      73, 210]
+            gronkowski  = ['gronkowski', 78, 265]
+            amendola    = ['amendola',   71, 190]
+            bennet      = ['bennet',     78, 275]
+        
+        linemen:
+            cannon  = ['cannon', 77, 335]
+            solder  = ['solder', 80, 325]
+            mason   = ['mason',  73, 310]
+            thuney  = ['thuney', 77, 305]
+            karras  = ['karras', 76, 305]
+
+    clustering examples into groups:
+        want to decide on "similarity" of examples, with goal
+        of separating into distinct, "natural", groups:
+            similarity is a distance measure
+        suppose we know that there are k different groups
+        in our training data, but don't know labels (here k = 2):
+            pick k samples (at random?) as exemplars
+            cluster remaining samples by minimizing distance
+            between samples in same cluster (objective function)
+            - put sample in group with closest exemplar
+            find median example in each cluster as new exemplar
+            repeat until no change
+
+title subject definitions:
+machine learning:
+    the use and development of computer systems that are able
+    to learn and adapt without following explicit instructions,
+    by using algorithms and statistical models to analyze and
+    draw inferences from patterns in data.
