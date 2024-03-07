@@ -90,6 +90,119 @@ lecture notes:
             find median example in each cluster as new exemplar
             repeat until no change
 
+    adding some new data:
+        suppose we have learned to separate receivers versus linemen
+        now ew are given some running backs, and want to use model to
+        decide if they are more like receivers or linemen:
+            blout = ['blout', 72, 250]
+            white = ['white', 70, 205]
+
+    machine learning methods:
+        we will see some examples of machine learning methods:
+            learn models based on unlabeled data, by clustering
+            training data into group of nearby points:
+                resulting clusters can assign labels to new data
+            learn models that separate labeled groups of similar
+            data from other groups:
+                may not be possible to perfectly separate groups,
+                without "over fitting"
+                but can make decisions with respect to trading off
+                "false positives" versus "false negatives"
+                resulting classifiers can assign labels to new data
+
+    feature representation:
+        features never fully describe the situation:
+            "all models are wrong, but some are useful." - George Box
+        feature engineering:
+            represent examples by feature vectors that will
+            facilitate generalization
+            suppose i want to use 100 examples from past to predict,
+            at the start of the subject, which students will get an a in 6.0002
+            some features surely helpful, e.g., GPA, prior programming
+            experience (not a perfect predictor)
+            other might cuase me to overfit, e.g., birth month, eye color
+    maximize the features that carry the information we want
+    and minimize those that don't
+
+    measuring distance between animals:
+        we can think of our animal examples as consisting of four binary features
+        and one integer feature
+        one way to learn to separate reptiles from non-reptiles is to measure
+        the distance between pairs of examples, and use that:
+            to cluster nearby examples into a common class (unlabeled data), or
+            to find a classifier surface in space of examples that optimally
+            separates different (labeled) collections of examples from other collections
+
+        can convert examples into feature vectors:
+            rattlesnake     = [1,1,1,1,0]
+            boa constrictor = [0,1,0,1,0]
+            dart frog       = [1,0,1,0,4]
+
+    minkowski metric:
+                        ₗₑₙ
+        dist(X1,X2,p) = (Σabs(X1ₖ - X2ₖ)ᵖ)¹/ᵖ
+                        ₖ₌₁
+            p = 1: manhattan distance:
+                the distance between two points measured along axes
+                at right angles
+            p = 2: euclidean distance:
+                between two point in euclidean space is the length
+                of the line segment between them
+
+        need to measure distances between feature vectors
+        typically use euclidean metric; manhattan may be appropriate
+        if different dimensions are not comparable
+
+    issues of concern when learning models:
+        learned models will depend on:
+            distance metric between examples
+            choice of feature vectors
+            constraints on complexity of model:
+                specified number of clusters
+                complexity of separating surface
+                want to avoid over fitting problem
+                (each example is its own cluster, or a complex separating surface)
+
+    classification approaches:
+        want to find boundaries in feature space that separate different classes
+        of labeled examples:
+            look for simple surface (e.g. best line or plane) that separates classes
+            look for more complex surfaces (subject to constraints) that
+            separate classes
+            use voting schemes:
+                find k nearest training examples, use majority vote to select label
+        issues:
+            how do we avoid over-fitting to data?
+            how do we measure performance?
+            how do we select best features?
+
+    classification:
+        attempt to minimize error on training data:
+            similar to fitting a curve to data
+        evaluate on training data
+
+    other statistical measures:
+                                                true positive
+        positive predictive value(ppv) = ------------------------------
+                                         true positive + false positive
+        solid line model:
+            .57
+        dashed line model:
+            .58
+        complex model, training:
+            .71
+        complex model, testing:
+            .78
+        you will also see "sensitivity" versus "specificity"
+
+                            true positive
+        sensitivity = ------------------------------ (percentage correctly found)
+                      true positive + false positive
+
+                            true positive
+        specificity = ------------------------------ (percentage correctly rejected)
+                      true positive + false positive
+
 title subject definitions:
 machine learning:
     the use and development of computer systems that are able
