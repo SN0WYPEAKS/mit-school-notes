@@ -1,0 +1,20 @@
+CHAPTER 2.2 BRANCHING PROGRAMS:
+    STRAIGHT-LINE PROGRAMS:
+        execute one statement after another in the order in which they appear,
+        and stop when they run out of statements
+    BRANCHING PROGRAMS:
+        SIMPLEST BRANCHING PROGRAM IS A CONDITIONAL STATEMENT:
+            CONDITIONALS HAVE THREE PARTS:
+                a test, i.e., an expression that evaluates to either true or false
+                a block of code that is executed if the test evaluates to true;
+                and an optional block that is executed if the test is false
+            conditionals are "if else" statements
+        indentation is semantically meaningful in python
+        NESTED CONDITIONALS:
+            when either the true block or the false block of a conditional
+            contains another conditional
+        PROGRAM RUNS IN CONSTANT TIME:
+            a program for which the maximum running time is bounded by the
+            length of the program
+        COMPUTATIONAL COMPLEXITY:
+            the study of the intrinsic difficulty of problems
