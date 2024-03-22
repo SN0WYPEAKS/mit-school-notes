@@ -1,4 +1,4 @@
-CHAPTER 2.1 INTRODUCTION TO PYTHON:
+CHAPTER 2.1 THE BASIC ELEMENTS OF PYTHON:
     LOW-LEVEL VERSUS HIGH-LEVEL:
         refers to whether we program using instructions and data objects at the level
         of the machine(e.g. move 64 bits of data from this location to that location)
