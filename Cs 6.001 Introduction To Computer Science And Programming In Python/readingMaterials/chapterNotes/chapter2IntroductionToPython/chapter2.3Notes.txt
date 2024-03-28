@@ -1,0 +1,29 @@
+CHAPTER 2.3 STRINGS AND INPUT:
+    THE OPERATOR + IS SAID TO BE OVERLOADED:
+        it has different meanings depending upon the types of the objects to which it is
+        applied
+        it means addition when applied to two numbers
+        and concatenation when applied to two strings
+    THE OPERATOR * IS ALSO OVERLOADED:
+        it means multiplication when used on two numbers
+        when applied to an int and a string, it duplicates the string equal to the int
+    TYPE CHECKING:
+        it turns careless(and sometimes subtle) mistakes into errors that stop execution,
+        rather than errors that lead programs to behave in mysterious ways
+    LENGTH(LEN):
+        this function can be used to find the length of a string
+    INDEXING:
+        can be used to extract individual characters from a string. in python all
+        indexing is zero based(the count starts at zero not one)
+    SLICING:
+        is used to extract substrings of arbitrary length. if s is a string, the
+        expression s[start:end] denotes the substring of s that starts at index
+        start and ends at index end-1
+        for example, 'abc'[1:3] = 'bc'
+        why does it end index end-1 rather than end? so that expressions such as
+        'abc'[0:len('abc')] have the value one might expect
+        if the value before the colon is omitted, it defaults to 0
+        if the value after the colon is omitted, it defaults to the length of the string
+CHAPTER 2.3.1 INPUT:
+    TYPE CONVERSIONS(TYPE CASTS):
+        the process of converting one type to another

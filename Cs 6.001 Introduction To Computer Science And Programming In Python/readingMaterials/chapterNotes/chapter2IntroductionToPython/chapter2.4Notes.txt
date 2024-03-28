@@ -1,0 +1,4 @@
+CHAPTER 2.4 ITERATION(LOOPING):
+    LOOP BODY:
+        an indented block of code following a loop statement that is executed until the
+        condition evaluates to false
