@@ -1,0 +1,156 @@
+topics:
+    represent knowledge with data structures
+    iteration and recursion as computational metaphors
+    abstraction of procedures and data types
+    organize and modularize systems using object classes
+    and methods
+    different classes of algorithms, searching and sorting
+    complexity of algorithms
+what does a computer do:
+    fundamentally:
+        performs calculations:
+            a billion calculations per second
+        remembers results:
+            100s of gigabytes of storage
+    what kinds of calculations:
+        built-in to the language
+        ones that you define as a programmer
+    computers only know what you tell them
+types of knowledge:
+    declarative:
+        statements of fact
+    imperative:
+        recipe or "how to"
+a numerical example:
+    declarative:
+        square root of a number x is y such that y*y=x
+    imperative:
+        start with a guess, g
+        if g*g is close enough to x, stop and say g is the
+        answer
+        otherwise make a new guess by averaging g and x/g
+        using the new guess, repeat process until close enough
+what is a recipe:
+    sequence of simple steps
+    flow of control process that specifies when each step is
+    executed
+    a means of determining when to stop
+    1+2+3 = an algorithm
+stored program computer:
+    sequence of instructions stored inside computer:
+        built from predefined set of primitive instructions:
+            arithmetic and logic
+            simple test
+            moving data
+    special program (interpreter) executes each instruction in order:
+        use tests to change flow of control through sequence
+        stop when done
+basic primitives:
+    turing showed that you can compute anything using 6 primitives
+    modern programming languages have more convenient set of primitives
+    can abstract methods to create new primitives
+    anything computable in one language is computable in any other
+    programming language
+creating recipes;
+    a programming language provides a set of primitve operations
+    expressions are complex but legal combinations of primitives in a
+    programming language
+    expressions and computations have values and meanings in a programming
+    language
+aspects of languages:
+    primitive constructs:
+        english:
+            words
+        programming language:
+            numbers, strings, simple operators
+aspects of languages:
+    syntax:
+        english:
+            "cat dog boy" not syntactically valid
+            "cat hugs boy" syntactically valid
+        programming language:
+            "hi"5 not syntactically valid
+            3.2*5 syntactically valid
+    static semantics:
+        which syntactically valid strings have meaning
+        english:
+            "i are hungry" syntactically valid but static semantic error
+        programming language:
+            3.2*5 syntactically valid
+            3+"hi" static semantic error
+    semantics:
+        the meaning associated with a syntactically correct string of symbols
+        with no static semantic errors:
+            english:
+                can have many meanings "flying planes can be dangerous"
+            programming languages:
+                have only one meaning but may not be what programmer intended
+where things go wrong:
+    syntactic errors:
+        common and easily caught
+    static semantic errors:
+        some languages check for these before running program
+        can cause unpredictable behavior
+    no semantic errors but different meaning than what the programmer intended:
+        program crashes, stops running
+        program runs forever
+        program gives an answer but different than expected
+objects:
+    programs manipulate data objects
+    objects have a type that defines the kinds of things programs can do to them:
+        Ana is a human, so she can walk, speak english, etc.
+        Chewbacca is a wookie, so he can walk, "mwaaarhrhh", etc.
+    objects are:
+        scalar:
+            cannot be subdivided
+        non-scalar:
+            have internal structure that can be accessed
+scalar objects:
+    int - represents integers, ex. 5
+    float - represents real numbers, ex. 3.27
+    bool - represents boolean values True and False
+    NoneType - special and has one value, None
+    can use type() to see the type of an object
+expressions:
+    combine objects and operators to form expressions
+    an expression has a value, which has a type
+    syntax for a simple expression:
+        object      operator    object
+operators on ints and floats:
+    i+j the sum         (if both are ints, 
+    i-j the difference  result is an int. if either or both are float,
+    i*j the product     result is float)
+
+    i/j division        (result is a float always)
+
+    i%j the remainder when i is divided by j
+    i**j i to the power of j
+binding variables and values:
+    equal sign is an assignment of a value to a variable name
+    pi = 3.14159
+    pi_approx = 22/7
+    value stored in computer memory
+    an assignment binds name to value
+    retrieve value associated with name or variable by invoking the name, by typing pi
+abstracting expressions:
+    why give names to values of expressions?
+    to reuse names instead of values
+    easier to read and change code later
+    pi = 3.14159
+    radius = 2.2
+    area = pi*(radius**2)
+programming vs math:
+    in programming, you do not "solve for x"
+    pi = 3.14159
+    radius = 2.2
+    # area of circle
+    area = pi*(radius**2)
+    radius += 1
+changing bindings:
+    can re-bind variable names using new assignment statements
+    previous value may still be stored in memory but lost the handle for it
+    value for area does not change until you tell the computer to do the calculation again
+
+title subjects:
+    computation:
+        the action of mathematical calculation
