@@ -1,9 +1,0 @@
-notes from the lecture:
-    talking about graphs and shortest path problems
-    only graphs on the board, so I can't write them here
-
-definition for title subjects:
-    graph-theoretic models:
-        A graph is comprised of a set of nodes, also referred to as vertices,
-        along with a set of either edges or arcs which connect pairs of nodes.
-        Used to identify mechanisms at steady state, starting from a global reaction.
